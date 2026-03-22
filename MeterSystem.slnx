@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="global.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/MeterSystem.Api/MeterSystem.Api.csproj" />
+    <Project Path="src/MeterSystem.Shared/MeterSystem.Shared.csproj" />
+    <Project Path="src/MeterSystem.Worker/MeterSystem.Worker.csproj" />
+  </Folder>
+</Solution>
