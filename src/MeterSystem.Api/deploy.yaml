@@ -17,3 +17,40 @@ spec:
           image: metersystem-api:latest
           imagePullPolicy: Never
 
+          ports:
+            - containerPort: 8080
+
+          env:
+           - name: ASPNETCORE_URLS
+             value: http://+:8080
+
+           - name: RabbitMQ__HostName
+             value: rabbitmq
+
+           - name: RabbitMQ__Port
+             value: "5672"
+
+           - name: RabbitMQ__UserName
+             value: guest
+
+           - name: RabbitMQ__Password
+             value: guest
+
+           - name: RabbitMQ__QueueName
+             value: meter-readings
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: metersystem-api
+spec:
+  selector:
+    app: metersystem-api
+
+  type: NodePort
+
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080

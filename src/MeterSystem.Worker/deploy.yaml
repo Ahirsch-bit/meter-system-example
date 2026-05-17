@@ -17,3 +17,21 @@ spec:
           image: metersystem-worker:latest
           imagePullPolicy: Never
 
+          env:
+            - name: RabbitMQ__HostName
+              value: rabbitmq
+
+            - name: RabbitMQ__Port
+              value: "5672"
+
+            - name: RabbitMQ__UserName
+              value: guest
+
+            - name: RabbitMQ__Password
+              value: guest
+
+            - name: RabbitMQ__QueueName
+              value: meter-readings
+
+            - name: Postgres__ConnectionString
+              value: Host=postgres;Port=5432;Database=meters;Username=postgres;Password=postgres
