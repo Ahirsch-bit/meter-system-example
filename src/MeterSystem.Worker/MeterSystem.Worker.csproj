@@ -8,10 +8,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.1.79" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0"/>
+        <PackageReference Include="Npgsql" Version="10.0.2" />
+        <PackageReference Include="RabbitMQ.Client" Version="7.2.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MeterSystem.Api\MeterSystem.Api.csproj" />
       <ProjectReference Include="..\MeterSystem.Shared\MeterSystem.Shared.csproj" />
     </ItemGroup>
 </Project>

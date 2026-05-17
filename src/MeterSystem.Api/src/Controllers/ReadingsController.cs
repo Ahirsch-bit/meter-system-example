@@ -15,6 +15,7 @@ public class ReadingsController:ControllerBase
     }
 
     [HttpPost]
+    [Route("readings")]
     public async Task<IActionResult> AddReading([FromBody] Models.ReadingRequest readingRequest)
     {
         await _readingService.AddReading(readingRequest);
