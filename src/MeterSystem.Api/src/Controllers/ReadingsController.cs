@@ -23,7 +23,7 @@ public class ReadingsController:ControllerBase
         return Accepted("readings");
     }
 
-    [HttpPost("raw")]
+    [HttpPost("readings/raw")]
     public async Task<IActionResult> PostRawAsync(
         [FromBody] RawReadingRequest request,
         CancellationToken cancellationToken)
