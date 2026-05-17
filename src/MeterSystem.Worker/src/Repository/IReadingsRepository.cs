@@ -1,4 +1,4 @@
-﻿using MeterSystem.Api.Models;
+﻿using MeterSystem.Shared.Models;
 
 namespace MeterSystem.Worker.Repository;
 

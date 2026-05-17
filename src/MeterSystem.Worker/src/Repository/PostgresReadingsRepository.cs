@@ -1,6 +1,6 @@
 ﻿using Dapper;
-using MeterSystem.Api.Models;
 using MeterSystem.Shared.Configuration;
+using MeterSystem.Shared.Models;
 using Microsoft.Extensions.Options;
 using Npgsql;
 

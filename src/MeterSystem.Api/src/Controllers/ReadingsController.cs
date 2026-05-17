@@ -1,4 +1,5 @@
 ﻿using MeterSystem.Api.Services;
+using MeterSystem.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeterSystem.Api.Controllers;
@@ -16,9 +17,19 @@ public class ReadingsController:ControllerBase
 
     [HttpPost]
     [Route("readings")]
-    public async Task<IActionResult> AddReading([FromBody] Models.ReadingRequest readingRequest)
+    public async Task<IActionResult> AddReading([FromBody] ReadingRequest readingRequest)
     {
         await _readingService.AddReading(readingRequest);
         return Accepted("readings");
+    }
+
+    [HttpPost("raw")]
+    public async Task<IActionResult> PostRawAsync(
+        [FromBody] RawReadingRequest request,
+        CancellationToken cancellationToken)
+    {
+        var result = await _readingService.AcceptRawAsync(request, cancellationToken);
+
+        return result ? Accepted() : BadRequest();
     }
 }

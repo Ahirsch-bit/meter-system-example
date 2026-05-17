@@ -8,7 +8,7 @@ builder.Services.Configure<RabbitMqOptions>(
 builder.Services.Configure<PostgresOptions>(
     builder.Configuration.GetSection("Postgres"));
 
-builder.Services.AddScoped<IReadingsRepository, PostgresReadingsRepository>();
+builder.Services.AddSingleton<IReadingsRepository, PostgresReadingsRepository>();
 
 builder.Services.AddHostedService<RabbitMqReadingConsumer>();
 var host = builder.Build();

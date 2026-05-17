@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace MeterSystem.Api.Models;
+namespace MeterSystem.Shared.Models;
 
 public class ReadingRequest
 {

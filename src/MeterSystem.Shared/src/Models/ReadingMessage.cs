@@ -1,8 +1,8 @@
-﻿namespace MeterSystem.Api.Models;
+﻿namespace MeterSystem.Shared.Models;
 
 public class ReadingMessage
 {
-    public int MeterNumber { get; set; }
+    public long MeterNumber { get; set; }
     public required IReadOnlyCollection<MeterReadingMessage> Readings { get; set; }
 }
 

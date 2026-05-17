@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Text.Json;
-using MeterSystem.Api.Models;
 using MeterSystem.Shared.Configuration;
+using MeterSystem.Shared.Models;
 using MeterSystem.Worker.Repository;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
